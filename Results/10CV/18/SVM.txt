@@ -1,0 +1,91 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SMO -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4"
+Relation:     MusicMoods-weka.filters.unsupervised.attribute.Reorder-Rlast-first-weka.filters.unsupervised.attribute.Remove-R2,4,8-10,13-weka.filters.unsupervised.attribute.Remove-R7
+Instances:    16527
+Attributes:   19
+              track_mode_confidence
+              track_key_confidence
+              track_time_signature_confidence
+              track_time_signature
+              track_tempo_confidence
+              track_end_of_fade_in
+              duration_ms
+              tempo
+              valence
+              liveness
+              instrumentalness
+              acousticness
+              speechiness
+              mode
+              loudness
+              key
+              energy
+              danceability
+              mood
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: 0, 1
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -1.6411 * (normalized) track_mode_confidence
+ +       0.7083 * (normalized) track_key_confidence
+ +      -0.1308 * (normalized) track_time_signature_confidence
+ +       1.2369 * (normalized) track_time_signature
+ +       0.4372 * (normalized) track_tempo_confidence
+ +      -0.9854 * (normalized) track_end_of_fade_in
+ +      -3.3969 * (normalized) duration_ms
+ +       0.5148 * (normalized) tempo
+ +       1.6661 * (normalized) valence
+ +       0.5531 * (normalized) liveness
+ +       0.7899 * (normalized) instrumentalness
+ +      -0.8562 * (normalized) acousticness
+ +       4.3834 * (normalized) speechiness
+ +       0.0072 * (normalized) mode
+ +      -1.6152 * (normalized) loudness
+ +      -0.0363 * (normalized) key
+ +       3.3151 * (normalized) energy
+ +       2.7085 * (normalized) danceability
+ -       4.0331
+
+Number of kernel evaluations: 46378989 (44.074% cached)
+
+
+
+Time taken to build model: 12.64 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       14242               86.1741 %
+Incorrectly Classified Instances      2285               13.8259 %
+Kappa statistic                          0.7237
+Mean absolute error                      0.1383
+Root mean squared error                  0.3718
+Relative absolute error                 27.6592 %
+Root relative squared error             74.3763 %
+Total Number of Instances            16527     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.837    0.113    0.885      0.837    0.860      0.725    0.862     0.823     0
+                 0.887    0.163    0.841      0.887    0.863      0.725    0.862     0.801     1
+Weighted Avg.    0.862    0.137    0.863      0.862    0.862      0.725    0.862     0.812     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 7031 1368 |    a = 0
+  917 7211 |    b = 1
+

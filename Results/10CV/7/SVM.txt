@@ -1,0 +1,69 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SMO -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4"
+Relation:     MusicMoods-weka.filters.unsupervised.attribute.Reorder-Rlast-first-weka.filters.unsupervised.attribute.Remove-R2,4,8-10,13-weka.filters.unsupervised.attribute.Remove-R7-weka.filters.unsupervised.attribute.Remove-R2-6,8,10-11,14,16-weka.filters.unsupervised.attribute.Remove-R1
+Instances:    16527
+Attributes:   8
+              duration_ms
+              valence
+              acousticness
+              speechiness
+              loudness
+              energy
+              danceability
+              mood
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: 0, 1
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -2.0138 * (normalized) duration_ms
+ +       1.5625 * (normalized) valence
+ +      -0.9537 * (normalized) acousticness
+ +       4.5601 * (normalized) speechiness
+ +      -3.482  * (normalized) loudness
+ +       4.2305 * (normalized) energy
+ +       3.1567 * (normalized) danceability
+ -       2.5296
+
+Number of kernel evaluations: 5844273 (57.108% cached)
+
+
+
+Time taken to build model: 1.33 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       14177               85.7808 %
+Incorrectly Classified Instances      2350               14.2192 %
+Kappa statistic                          0.7158
+Mean absolute error                      0.1422
+Root mean squared error                  0.3771
+Relative absolute error                 28.446  %
+Root relative squared error             75.4267 %
+Total Number of Instances            16527     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.831    0.115    0.882      0.831    0.856      0.717    0.858     0.819     0
+                 0.885    0.169    0.835      0.885    0.860      0.717    0.858     0.796     1
+Weighted Avg.    0.858    0.141    0.859      0.858    0.858      0.717    0.858     0.808     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 6981 1418 |    a = 0
+  932 7196 |    b = 1
+

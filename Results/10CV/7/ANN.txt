@@ -1,0 +1,107 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a
+Relation:     MusicMoods-weka.filters.unsupervised.attribute.Reorder-Rlast-first-weka.filters.unsupervised.attribute.Remove-R2,4,8-10,13-weka.filters.unsupervised.attribute.Remove-R7-weka.filters.unsupervised.attribute.Remove-R2-6,8,10-11,14,16-weka.filters.unsupervised.attribute.Remove-R1
+Instances:    16527
+Attributes:   8
+              duration_ms
+              valence
+              acousticness
+              speechiness
+              loudness
+              energy
+              danceability
+              mood
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    -2.824895482903919
+    Node 2    -1.8386470304477276
+    Node 3    2.821193529245138
+    Node 4    2.4592301367564446
+    Node 5    2.2388277588966328
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    2.8248954829039175
+    Node 2    1.8386470304477271
+    Node 3    -2.8211935292451367
+    Node 4    -2.4592301367564438
+    Node 5    -2.238827758896634
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    -18.68768976346562
+    Attrib duration_ms    -27.69135533374046
+    Attrib valence    4.5811736667627
+    Attrib acousticness    0.45304200260056426
+    Attrib speechiness    10.455418456875877
+    Attrib loudness    -5.276666453039149
+    Attrib energy    8.176443927942685
+    Attrib danceability    1.9974362242117
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    -51.35235709652098
+    Attrib duration_ms    9.94433918686974
+    Attrib valence    -2.042427834557987
+    Attrib acousticness    0.6581299753376386
+    Attrib speechiness    -60.32862371188101
+    Attrib loudness    7.0978679835208505
+    Attrib energy    -4.761161006100188
+    Attrib danceability    -3.0217022290971713
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    -7.517979933279541
+    Attrib duration_ms    -21.300353104817276
+    Attrib valence    2.6076362076590307
+    Attrib acousticness    12.761256204074115
+    Attrib speechiness    -10.610820763752695
+    Attrib loudness    -6.44063322746468
+    Attrib energy    -3.6517635888147058
+    Attrib danceability    -16.27855113806389
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    7.869460102033172
+    Attrib duration_ms    3.2576202547922293
+    Attrib valence    -3.2343192893055557
+    Attrib acousticness    3.1326212813590155
+    Attrib speechiness    8.103471199910574
+    Attrib loudness    0.12493398418321405
+    Attrib energy    -2.2439550145069287
+    Attrib danceability    -0.4423193763670521
+Class 0
+    Input
+    Node 0
+Class 1
+    Input
+    Node 1
+
+
+Time taken to build model: 10.06 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       14316               86.6219 %
+Incorrectly Classified Instances      2211               13.3781 %
+Kappa statistic                          0.7324
+Mean absolute error                      0.1915
+Root mean squared error                  0.3153
+Relative absolute error                 38.3194 %
+Root relative squared error             63.0646 %
+Total Number of Instances            16527     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.864    0.132    0.871      0.864    0.868      0.732    0.932     0.928     0
+                 0.868    0.136    0.861      0.868    0.865      0.732    0.932     0.925     1
+Weighted Avg.    0.866    0.134    0.866      0.866    0.866      0.732    0.932     0.926     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 7260 1139 |    a = 0
+ 1072 7056 |    b = 1
+
